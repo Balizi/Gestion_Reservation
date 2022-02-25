@@ -1,0 +1,38 @@
+body{
+  /* background-image: url('./s9nIMMH-airplane-wall-paper.jpg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  height: 100%;
+  width: 100%;
+}
+.sec{
+  background-image: url('./../img/bg.jpg');
+  height: 636px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+h1{
+  text-align: center;
+  margin-top: 50px;
+}
+.card{
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+form{
+  width: 100%;
+}
+.end{
+  margin-left: auto;
+  margin-right: auto;
+}
+table tr th,
+table tr td{
+  text-align: center;
+}
+#test{
+  display: none;
+}

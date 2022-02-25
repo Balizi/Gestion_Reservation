@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(244, 243, 255);
+  color: #4a20aa;
+  width: 100%;
+}
+nav{
+  height: 120px;
+}
+nav form{
+  margin-right: 40px;
+}
+nav a h2{
+  color: #fff;
+}
+.shop{
+  color: #fff;
+  font-size: 40px;
+}
+.container h1,
+.container p{
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: flex-end; */
+  margin-top: 50px;
+  text-align: center;
+  /* background-color: rgb(168, 177, 253); */
+}
+
+.container form{
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.container form .card-footer{
+  background-color: rgb(255, 255, 255);
+}
+
+.dropdown{
+  position: relative;
+  border: 1px solid #333;
+  width: 300px;
+  height: 50px;
+  z-index: 1000;
+  border-radius: 10px;
+
+}
+.dropdown div{
+  margin-top: 10px;
+}
+.dropdown::before{
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 10000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #333;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.dropdown.active::before{
+  top: 25px;
+  transform: rotate(-225deg);
+}
+.dropdown input{
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.05); */
+  padding: 12px 20px;
+  border-radius: 10px;
+
+}
+.dropdown .option{
+  position: absolute;
+  justify-content: flex-end;
+  top: 60px;
+  background: #fff;
+  /* background-color: red; */
+  /* box-shadow: 0 30px 30px rgba(0,0,0,0.5) ; */
+  /* width: 100px; */
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  margin-left: 100px;
+}
+.dropdown.active .option{
+  display: block;
+}
+.dropdown .option span{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+.dropdown .option .plus,
+.dropdown .option .minus{
+  background-color: #62baea;
+}
+.end{
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .card{
+  color: #000;
+}
