@@ -1,11 +1,10 @@
 <?php
-    
-    // if(isset($_POST['submit']))
-    // {
-    //     $createUser=new UsersController();
-    //     $createUser->register();
-    // }
-    // print_r($employes);
+    $user=new UserController();
+
+    if(isset($_POST['submit']))
+    {
+        $user->register();
+    }
 ?>
 <div class="container">
     <div class="row my-4">
@@ -23,13 +22,13 @@
                             <input class="form-control" type="text" placeholder="Prenom" name="prenom" required>
                         </div>
                         <div class="form-group mt-2">
-                            <input class="form-control" type="tel" placeholder="Télephone" name="telephone " required>
+                            <input class="form-control" type="tel" placeholder="Télephone" name="telephone" required>
                         </div>
                         <div class="form-group mt-2">
                             <input class="form-control" type="email" placeholder="Email" name="email" >
                         </div>
                         <div class="form-group mt-2">
-                            <input class="form-control" type="password" placeholder="Mot de passe" name="pass" required>
+                            <input class="form-control" type="password" placeholder="Mot de passe" name="password" required>
                         </div>
                         <button name="submit" class="btn btn-sm btn-primary mt-4">Inscription</button>
                     </form>

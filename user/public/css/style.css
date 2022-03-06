@@ -1,18 +1,18 @@
 body{
-  /* background-image: url('./s9nIMMH-airplane-wall-paper.jpg');
+  background-image: url('./../img/bg.jpg');
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
-.sec{
+/* .sec{
   background-image: url('./../img/bg.jpg');
   height: 636px;
   background-repeat: no-repeat;
   background-size: cover;
 
-}
+} */
 h1{
   text-align: center;
   margin-top: 50px;

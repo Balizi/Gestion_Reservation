@@ -8,6 +8,12 @@ class voyageurController
         return $voyageur;
     }
 
+    public function getAllReservation()
+    {
+        $voyageur=Voyageur::getAllReservation();
+        return $voyageur;
+    }
+
     public function getOneVoyageur()
     {
         if(isset($_POST['id']))

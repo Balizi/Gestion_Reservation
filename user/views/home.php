@@ -17,19 +17,18 @@
   if(isset($_POST['redirect']))
   {
     // die(var_dump($_SESSION));
-    if(isset($_SESSION['Userlogged']) && $_SESSION['Userlogged']===true)
+    if(isset($_SESSION['userLogged']) && $_SESSION['userLogged']===true)
     {
       Redirect::to('reserver');
     }
     else if(isset($_GET['page']) && $_GET['page'] ==='register')
     {
-      $home->index('register');
+      Redirect::to('register');
+      // $home->index('register');
     }
     else
     {
-      $home->index('login');
-      echo "<script> document.getElementById('sec').style.display='none'; </script>";
-      // echo "<script>alert('yes');</script>";
+      Redirect::to('login');
     }
   }
 
@@ -115,6 +114,9 @@
         </form>
       </div>
     </div>
+   
+
+
     <?php if(!empty($dt)){?>
         <div class="col-md-6 end mt-4">
             <label for="formGroupExampleInput" class="form-label "><h3>Résultats :</h3></label>
@@ -123,42 +125,38 @@
                 <div class="col-md-4 bg-info card-header" style="margin-left: 20px;">Relation : <?php echo $_POST['ville_depart'];?>-<?php echo $_POST['ville_arrive'];?></div>
         </div>
         <div class="table-responsive">
-
-        
-        <table class="table caption-top mt-3">
-            <thead>
-            <tr>
-                <!-- <th scope="col">#</th> -->
+          <table class="table caption-top mt-3 bg-light">
+            <thead class="table-dark">
+              <tr>
                 <th scope="col">Départ</th>
                 <th scope="col">Arrivé</th>
-                <!-- <th scope="col">Handle</th> -->
-                <!-- <th scope="col">Handle</th> -->
-                <!-- <th scope="col">Handle</th> -->
                 <th scope="col"></th>
-            </tr>
+              </tr>
             </thead>
             <tbody>
                 <?php foreach($dt as $in):?>
-                    <tr>
-                        <!-- <th scope="row"><?php echo $in['idV'];?></th> -->
-                        <td><?php $date= $in['date_depart']; $date=strtotime($date);echo date('H:i:s',$date);?></td>
-                        <td><?php $date= $in['date_arrive'];$date=strtotime($date); echo date('H:i:s',$date);?></td>
-                        <!-- <td><?php $vd=$in['ville_depart'] ?></td> -->
-                        <!-- <td><?php  ?></td> -->
-                        <!-- <td><?php  ?></td> -->
-                        <!-- <td><a href="<?php //echo BASE_URL;?>reserver" name="" class="btn bg-warning">ACHETER EN LIGNE</a></td> -->
-                        <form action="" method="post">
-                          <td><button type="submit" name="redirect" class="btn bg-warning">ACHETER EN LIGNE</button></td>
-                        </form>
-                    </tr>
-                    <?php endforeach;?>
+                  <tr>
+                      <td><?php $date= $in['date_depart']; $date=strtotime($date);echo date('H:i:s',$date);?></td>
+                      <td><?php $date= $in['date_arrive'];$date=strtotime($date); echo date('H:i:s',$date);?></td>
+                      <form action="" method="post">
+                        <td><button type="submit" name="redirect" class="btn bg-warning">ACHETER EN LIGNE</button></td>
+                      </form>
+                  </tr>
+                  <?php endforeach;?>
             </tbody>
-            
-        </table>
+          </table>
         </div>
     <?php }if(empty($dt) && isset($_POST['search'])){?>
+      <div class="col-md-6 end mt-4">
         <label for="formGroupExampleInput" class="form-label "><h3>Résultats :</h3></label>
-        <div class="alert alert-info"></div>
+        <div class="d-flex justify-content-center mt-4">
+          <div class="col-md-3 bg-info card-header">Départ le : 2000/03/16</div>
+          <div class="col-md-4 bg-info card-header" style="margin-left: 20px;">Relation : <?php echo $_POST['ville_depart'];?>-<?php echo $_POST['ville_arrive'];?></div>
+        </div>
+        <div class="alert alert-info mt-4">
+          Aucun Volé
+        </div>
+      </div>
     <?php }?>
 </div>
 

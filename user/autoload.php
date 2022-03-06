@@ -10,7 +10,7 @@ function autoload($calss_name)
 {
     $array_paths=array(
         'database/',
-        'app/classes',
+        'app/classes/',
         'models/',
         'views/',
         'controllers/'

@@ -1,9 +1,11 @@
 <?php
-    if(isset($_POST['sr']))
+    // echo "<script>alert('yes');</script>";
+    $user=new UserController();
+    if(isset($_POST['submit']))
     {
-        echo "<script>alert('click');</script>";
-        $createUser=new adminContoller();
-        $createUser->Auth();
+        // echo "<script>alert('yes');</script>";
+        
+        $user->Auth();
     }
 ?>
 <div class="container">
@@ -16,12 +18,12 @@
                 <div class="card-body bg-lghit">
                     <form method="post" class="mr-1"  >
                         <div class="form-group">
-                            <input class="form-control" type="email" placeholder="username" name="email" required>
+                            <input class="form-control" type="email" placeholder="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <input class="form-control mt-2" type="password" placeholder="Mot de passe" name="password" required>
                         </div>
-                        <button type="submit" name="sr" class="btn btn-sm btn-primary mt-4">Conexion</button>
+                        <button name="submit" class="btn btn-sm btn-primary mt-4">Conexion</button>
                         <!-- <a href="#" class="card-link">Another link</a> -->
                     </form>
                 </div>

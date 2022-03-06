@@ -5,7 +5,16 @@ class Voyageur{
 
     static public function getAll()
     {
-        $stmt=DB::Connect()->prepare('SELECT * FROM Voyageur');
+        $stmt=DB::Connect()->prepare('SELECT * FROM user');
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+        $stmt=null;
+    }
+
+    static public function getAllReservation()
+    {
+        $stmt=DB::Connect()->prepare('SELECT * FROM `reservation` ORDER BY idVoyage');
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

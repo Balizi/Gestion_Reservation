@@ -121,3 +121,11 @@ nav a h2{
 .container .card{
   color: #000;
 }
+
+#user,
+#shop{
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+}

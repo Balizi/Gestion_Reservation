@@ -6,7 +6,7 @@
     require_once './autoload.php';
 
     $home =new HomeController();
-    $pages=['addClient','deleteClient','homeClient','updateClient','homeVoyage','addVoyage','updateVoyage','deleteVoyage','login','register','logout'];
+    $pages=['addClient','deleteClient','homeClient','updateClient','homeVoyage','addVoyage','updateVoyage','deleteVoyage','login','register','logout','homeReservation'];
 if(isset($_SESSION['adminLogged']) && $_SESSION['adminLogged']===true)
 {
     if(isset($_GET['page']))

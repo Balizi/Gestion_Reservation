@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="reservation.html">
+                    <a href="homeReservation">
                         <i class="las la-ticket-alt"></i>
                         <span>Reservation</span>
                     </a>

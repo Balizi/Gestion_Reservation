@@ -1,6 +1,6 @@
 <?php
     $voyageure=new voyageurController();
-    $vg=$voyageure->getAllVoyageur();
+    $vg=$voyageure->getAllReservation();
     // die(var_dump($vg));
     // echo $vg['nom'];
     // die(print_r($vg));
@@ -20,13 +20,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="homeReservation">
+                    <a href="homeReservation" class="active">
                         <i class="las la-ticket-alt"></i>
                         <span>Reservation</span>
                     </a>
                 </li>
                 <li>
-                    <a href="homeClient" class="active">
+                    <a href="homeClient" >
                         <i class="las la-users"></i>
                         <span>Client</span>
                     </a>
@@ -65,19 +65,19 @@
             <table class="table table-sm table-dark">
                 <thead>
                     <tr class="table-active">
+                        <th>#</th>
                         <th>Nom</th>
                         <th>Prenom</th>
-                        <th>Email</th>
-                        <th>Télephone</th>
+                        <th>Date Naissance</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach($vg as $vo):?>
                   <tr>
-                    <td><?= $vo['nom'];?></td>
-                    <td><?= $vo['prenom']?></td>
-                    <td><?= $vo['email']; ?></td>
-                    <td><?= $vo['telephone']?></td>
+                    <td><?= $vo['idVoyage'];?></td>
+                    <td><?= $vo['nom']?></td>
+                    <td><?= $vo['prenom']; ?></td>
+                    <td><?= $vo['datenaissance']?></td>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
